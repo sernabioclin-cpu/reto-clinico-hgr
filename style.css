@@ -189,6 +189,8 @@ section.tight{padding:28px 0;}
   color:var(--cream);
 }
 .day-row:hover .day-meta{color:var(--wine-700);}
+.day-row.done{opacity:.55;}
+.day-row.done .day-status{background:transparent;}
 
 /* rules card */
 .rules{

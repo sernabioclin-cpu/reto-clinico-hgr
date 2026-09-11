@@ -26,7 +26,7 @@
       <div>
         <div class="eyebrow">17 de septiembre · Día Mundial de la Seguridad del Paciente</div>
         <h1>Seis días. Seis decisiones<br>que pueden <span class="accent">salvar una vida.</span></h1>
-        <p class="lead">Gestión de Calidad — un reto clínico por día para todo el personal, con casos reales de razonamiento y toma de decisiones seguras.</p>
+        <p class="lead">Departamento de Planeación y Calidad — un reto clínico por día para todo el personal, con casos reales de razonamiento y toma de decisiones seguras.</p>
         <div class="tagline">Pequeñas decisiones, grandes impactos.</div>
       </div>
       <div class="hero-art">
@@ -67,6 +67,10 @@
     <h2 class="section-title">Calendario de retos</h2>
     <p class="section-sub">Toca un día para ver el caso clínico y responder.</p>
 
+    <!-- Estado de cada día: cámbialo a mano según vayas publicando.
+         - "próximamente"          -> <span class="day-status">próximamente</span>
+         - vigente hoy (24h)        -> <span class="day-status live">hoy · responde ahora</span>
+         - cerrado                  -> <span class="day-status">cerrado</span>  y agrega la clase "done" al <a class="day-row ..."> de esa fila. -->
     <div class="timeline" id="timeline">
       <a class="day-row" data-n="1" data-date="2026-09-10" href="dia1.html">
         <span class="day-icon teal"><svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="7.6" r="3.6" fill="#f8f3e9"/><path d="M4.2 20.2c0-4.6 3.6-7.4 7.8-7.4s7.8 2.8 7.8 7.4" fill="#f8f3e9"/></svg></span>
@@ -120,24 +124,6 @@
     <div class="hashtags">#RetoClínicoHGR · #SeguridadDelPaciente</div>
   </div>
 </footer>
-
-<script>
-  // Marca automáticamente el estado de cada día según la fecha del dispositivo.
-  const rows = document.querySelectorAll('.day-row');
-  const today = new Date(); today.setHours(0,0,0,0);
-  rows.forEach(row => {
-    const d = new Date(row.dataset.date + 'T00:00:00');
-    const status = row.querySelector('.day-status');
-    if (d.getTime() === today.getTime()) {
-      status.textContent = 'hoy · responde ahora';
-      status.classList.add('live');
-      row.classList.add('done');
-    } else if (d < today) {
-      status.textContent = 'cerrado';
-      row.classList.add('done');
-    }
-  });
-</script>
 
 </body>
 </html>
