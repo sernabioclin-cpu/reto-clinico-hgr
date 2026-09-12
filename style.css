@@ -192,6 +192,60 @@ section.tight{padding:28px 0;}
 .day-row.done{opacity:.55;}
 .day-row.done .day-status{background:transparent;}
 
+/* resultados / ganadores */
+.day-result{ margin-bottom:44px; }
+.day-result:not(:first-child){ padding-top:36px; border-top:1px dashed var(--line); }
+.day-result-header{
+  font-family:'Fraunces', serif;
+  color:var(--wine-700);
+  font-size:19px;
+  margin-bottom:18px;
+}
+.result-card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  overflow:hidden;
+  margin-bottom:18px;
+}
+.result-card img{ width:100%; display:block; object-fit:cover; max-height:420px; }
+.result-card .rc-body{ padding:18px 22px; }
+.result-card .rc-tag{
+  display:inline-block;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.02em;
+  padding:4px 12px;
+  border-radius:20px;
+  margin-bottom:10px;
+}
+.result-card.winner .rc-tag{ background:var(--gold); color:var(--teal-950); }
+.result-card.finalist .rc-tag{ background:var(--cream-2); color:var(--wine-700); border:1px solid var(--line); }
+.result-card h3{ font-size:20px; margin-bottom:2px; }
+.result-card .rc-role{ color:#6b756f; font-size:14px; margin-bottom:10px; }
+.result-card .rc-premio{ font-size:15px; color:var(--ink); }
+.result-card .rc-premio b{ color:var(--wine-700); }
+.finalists-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+@media (max-width:640px){ .finalists-grid{ grid-template-columns:1fr; } }
+.detalle-gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-top:6px;
+}
+.detalle-gallery figure{ margin:0; }
+.detalle-gallery img{
+  width:100%; height:150px; object-fit:cover;
+  border:1px solid var(--line);
+}
+.detalle-gallery figcaption{
+  font-size:12px; color:#6b756f; margin-top:6px; text-align:center;
+}
+@media (max-width:640px){ .detalle-gallery{ grid-template-columns:1fr 1fr; } }
+
 /* rules card */
 .rules{
   background:var(--paper);
