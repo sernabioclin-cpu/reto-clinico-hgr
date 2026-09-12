@@ -207,7 +207,7 @@ section.tight{padding:28px 0;}
   overflow:hidden;
   margin-bottom:18px;
 }
-.result-card img{ width:100%; display:block; object-fit:cover; max-height:420px; }
+.result-card img{ width:100%; display:block; height:auto; }
 .result-card .rc-body{ padding:18px 22px; }
 .result-card .rc-tag{
   display:inline-block;
