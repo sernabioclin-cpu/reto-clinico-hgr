@@ -13,7 +13,9 @@
 3. Sube el cambio a GitHub — con tu flujo habitual de GitHub Pages se refleja solo.
 
 ## Publicar un ganador
-Agrega una tarjeta en `ganadores.html` (hay un ejemplo comentado en el archivo) con el nombre, servicio/turno y la justificación premiada, y quita el bloque de "aún no hay resultados" cuando ya tengas el primero.
+Copia el bloque `<div class="day-result">…</div>` del día en `ganadores.html`, pégalo justo arriba del anterior (los más nuevos siempre quedan primero) y edítalo con los datos reales. Guarda las fotos en la carpeta `img/` con nombres tipo `dia2-ganadora-nombre.jpg` y referencia esa misma ruta (`img/dia2-ganadora-nombre.jpg`) en el `src` de cada `<img>`.
+
+**Al subir a GitHub:** sube las fotos sueltas directamente dentro de la carpeta `img/` (sin subcarpetas) — es la forma que funcionó al arrastrar archivos desde Windows.
 
 ## Sugerencia de despliegue
 Mismo patrón que tus otros proyectos (QUIROX, MECIC, Estudio Sombra): repo en `sernabioclin-cpu` + GitHub Pages. Por ejemplo, quedaría en:
