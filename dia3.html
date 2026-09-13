@@ -48,6 +48,13 @@
   <div class="container">
     Gestión de Calidad · Subdirección de Planeación y Calidad · Hospital General Reynosa
     <div class="hashtags">#RetoClínicoHGR · #SeguridadDelPaciente</div>
+    <div class="visit-count" id="visit-count"></div>
+<script>
+  fetch('https://api.countapi.xyz/hit/reto-clinico-hgr/dia3')
+    .then(r => r.json())
+    .then(d => { document.getElementById('visit-count').textContent = d.value.toLocaleString('es-MX') + ' visitas a esta página'; })
+    .catch(() => {});
+</script>
   </div>
 </footer>
 
