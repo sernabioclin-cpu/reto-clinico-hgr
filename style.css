@@ -342,6 +342,7 @@ footer{
   font-size:13px;
 }
 footer .hashtags{color:var(--wine-700); margin-top:6px;}
-footer .visit-count{color:#a3ab9f; font-size:11px; margin-top:10px;}
+footer .visit-count{margin-top:10px;}
+footer .visit-count img{height:15px; filter:grayscale(1) opacity(.6); vertical-align:middle;}
 
 .back-row{margin:26px 0 0;}
