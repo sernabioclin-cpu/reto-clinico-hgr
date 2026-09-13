@@ -342,5 +342,6 @@ footer{
   font-size:13px;
 }
 footer .hashtags{color:var(--wine-700); margin-top:6px;}
+footer .visit-count{color:#a3ab9f; font-size:11px; margin-top:10px;}
 
 .back-row{margin:26px 0 0;}
