@@ -342,7 +342,16 @@ footer{
   font-size:13px;
 }
 footer .hashtags{color:var(--wine-700); margin-top:6px;}
-footer .visit-count{margin-top:10px;}
-footer .visit-count img{height:15px; filter:grayscale(1) opacity(.6); vertical-align:middle;}
+footer .visit-count{color:#a3ab9f; font-size:11px; margin-top:10px;}
 
 .back-row{margin:26px 0 0;}
+
+.case-disclaimer{
+  background:var(--cream-2);
+  border-left:3px solid var(--gold);
+  padding:10px 16px;
+  margin-bottom:20px;
+  font-size:13px;
+  font-style:italic;
+  color:#5a655f;
+}
