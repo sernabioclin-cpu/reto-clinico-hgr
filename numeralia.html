@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reto Clínico de Seguridad del Paciente 2026 — Participación</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #006657;
+    --green-deep: #10312b;
+    --green-mid: #235b4e;
+    --gold: #bc955c;
+    --gold-light: #ddc9a3;
+    --wine: #9f2241;
+    --paper: #faf7f0;
+    --paper-raised: #ffffff;
+    --ink: #17231f;
+    --ink-soft: #4a5a54;
+    --line: #e3dcc9;
+    --shadow: rgba(16,49,43,0.08);
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --paper: #101815;
+      --paper-raised: #17231f;
+      --ink: #f2ede1;
+      --ink-soft: #b9c4bd;
+      --line: #2b3733;
+      --shadow: rgba(0,0,0,0.35);
+      --gold-light: #3a3122;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #101815;
+    --paper-raised: #17231f;
+    --ink: #f2ede1;
+    --ink-soft: #b9c4bd;
+    --line: #2b3733;
+    --shadow: rgba(0,0,0,0.35);
+    --gold-light: #3a3122;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); box-sizing: border-box; }
+  *, *:before, *:after { box-sizing: inherit; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,h2,h3 { font-family: 'Fraunces', Georgia, serif; margin: 0; color: var(--ink); font-weight: 600; }
+  a { color: inherit; }
+  img { max-width: 100%; }
+
+  .gobline { height: 6px; background: linear-gradient(90deg, var(--wine) 0 33%, var(--gold) 33% 66%, var(--green) 66% 100%); }
+
+  header.masthead {
+    background: var(--green-deep);
+    color: #f4efe2;
+    padding: 2.6rem 1.5rem 2.2rem;
+  }
+  .masthead-inner { max-width: 1100px; margin: 0 auto; }
+  .agency-row {
+    display: flex; align-items: center; gap: 0.85rem;
+    font-size: 0.78rem; letter-spacing: 0.02em; color: var(--gold-light);
+    margin-bottom: 1.4rem;
+  }
+  .agency-mark {
+    width: 40px; height: 40px; border-radius: 50%;
+    border: 1.5px solid var(--gold-light);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif; font-weight: 700; font-size: 0.95rem;
+    color: var(--gold-light); flex-shrink: 0;
+  }
+  .agency-text .line1 { font-weight: 600; color: #f4efe2; font-size: 0.92rem; }
+  .agency-text .line2 { opacity: 0.85; }
+  header.masthead h1 {
+    font-size: clamp(1.7rem, 4vw, 2.6rem);
+    color: #fff;
+    max-width: 20ch;
+  }
+  .masthead-sub {
+    margin-top: 0.9rem;
+    font-size: 1.05rem;
+    color: var(--gold-light);
+    max-width: 56ch;
+  }
+  .masthead-meta {
+    margin-top: 1.6rem;
+    display: flex; flex-wrap: wrap; gap: 0.6rem 1.8rem;
+    font-size: 0.86rem;
+    color: #d9d2c0;
+    border-top: 1px solid rgba(244,239,226,0.18);
+    padding-top: 1.1rem;
+  }
+  .masthead-meta strong { color: #f4efe2; font-weight: 600; }
+
+  main { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+  .kpi-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    margin-top: -2.4rem;
+    border: 1px solid var(--line);
+    box-shadow: 0 12px 30px var(--shadow);
+    position: relative; z-index: 2;
+  }
+  .kpi {
+    background: var(--paper-raised);
+    padding: 1.3rem 1.2rem;
+  }
+  .kpi .num { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600; color: var(--green); line-height: 1; }
+  :root[data-theme="dark"] .kpi .num, @media (prefers-color-scheme: dark) { }
+  .kpi .lbl { margin-top: 0.4rem; font-size: 0.78rem; color: var(--ink-soft); line-height: 1.3; }
+
+  section { padding: 3.2rem 0 0.5rem; }
+  section.first { padding-top: 3.6rem; }
+  .section-head { max-width: 62ch; margin-bottom: 1.6rem; }
+  .section-eyebrow { font-size: 0.78rem; color: var(--wine); font-weight: 600; margin-bottom: 0.3rem; }
+  .section-head h2 { font-size: 1.5rem; }
+  .section-head p { color: var(--ink-soft); font-size: 0.95rem; margin-top: 0.5rem; }
+
+  .card {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    padding: 1.6rem 1.7rem;
+  }
+
+  /* Reto participation bars */
+  .rbar-row {
+    display: grid;
+    grid-template-columns: minmax(180px,260px) 1fr 52px;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .rbar-row:last-child { border-bottom: none; }
+  .rbar-label { display: flex; flex-direction: column; gap: 0.1rem; }
+  .rbar-code { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; color: var(--wine); }
+  .rbar-name { font-size: 0.88rem; font-weight: 600; color: var(--ink); }
+  .rbar-date { font-size: 0.76rem; color: var(--ink-soft); }
+  .rbar-track { background: var(--gold-light); height: 14px; position: relative; overflow: hidden; }
+  .rbar-fill { background: linear-gradient(90deg, var(--green-mid), var(--green)); height: 100%; }
+  .rbar-value { text-align: right; font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.1rem; color: var(--green); }
+
+  /* horizontal bars (discipline / turno / depth) */
+  .hbar-row { display: grid; grid-template-columns: minmax(120px,190px) 1fr auto; align-items: center; gap: 0.9rem; padding: 0.5rem 0; }
+  .hbar-label { font-size: 0.85rem; color: var(--ink); }
+  .hbar-track { background: var(--gold-light); height: 10px; }
+  .hbar-fill { height: 100%; background: var(--green); }
+  .hbar-value { font-size: 0.85rem; font-weight: 600; color: var(--ink); white-space: nowrap; }
+  .hbar-pct { font-weight: 400; color: var(--ink-soft); }
+  .depth-highlight .hbar-fill { background: var(--wine); }
+  .depth-highlight .hbar-label, .depth-highlight .hbar-value { color: var(--wine); font-weight: 700; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+  @media (max-width: 720px) { .two-col { grid-template-columns: 1fr; } }
+
+  /* tabs */
+  .tabs-nav { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.1rem; }
+  .tab-label {
+    padding: 0.5rem 0.95rem; border: 1px solid var(--line); background: var(--gold-light);
+    color: var(--ink-soft); font-size: 0.82rem; font-weight: 600; cursor: pointer;
+  }
+  .tab-code { pointer-events: none; }
+  input[type="radio"][name="retotab"] { display: none; }
+  .tab-panel { display: none; }
+  #tab1:checked ~ .tabs-panels #panel1 { display:block; }
+#tab1:checked ~ .tabs-nav label[for="tab1"] { color: var(--ink); border-color: var(--green); background: var(--paper); }
+#tab2:checked ~ .tabs-panels #panel2 { display:block; }
+#tab2:checked ~ .tabs-nav label[for="tab2"] { color: var(--ink); border-color: var(--green); background: var(--paper); }
+#tab3:checked ~ .tabs-panels #panel3 { display:block; }
+#tab3:checked ~ .tabs-nav label[for="tab3"] { color: var(--ink); border-color: var(--green); background: var(--paper); }
+#tab4:checked ~ .tabs-panels #panel4 { display:block; }
+#tab4:checked ~ .tabs-nav label[for="tab4"] { color: var(--ink); border-color: var(--green); background: var(--paper); }
+#tab5:checked ~ .tabs-panels #panel5 { display:block; }
+#tab5:checked ~ .tabs-nav label[for="tab5"] { color: var(--ink); border-color: var(--green); background: var(--paper); }
+#tab6:checked ~ .tabs-panels #panel6 { display:block; }
+#tab6:checked ~ .tabs-nav label[for="tab6"] { color: var(--ink); border-color: var(--green); background: var(--paper); }
+
+  .panel-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; flex-wrap: wrap; border-bottom: 2px solid var(--green); padding-bottom: 1rem; margin-bottom: 1.3rem; }
+  .panel-eyebrow { font-size: 0.76rem; color: var(--wine); font-weight: 600; margin: 0 0 0.25rem; }
+  .panel-head h3 { font-size: 1.15rem; max-width: 44ch; }
+  .panel-n { text-align: right; flex-shrink: 0; }
+  .panel-n span { display: block; font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600; color: var(--green); line-height: 1; }
+  .panel-n { font-size: 0.76rem; color: var(--ink-soft); }
+  .panel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  @media (max-width: 720px) { .panel-grid { grid-template-columns: 1fr; gap: 1.2rem; } }
+  .panel-subhead { font-size: 0.76rem; text-transform: none; color: var(--ink-soft); font-weight: 600; margin: 0 0 0.6rem; }
+  .mbar-row { display: grid; grid-template-columns: minmax(120px,170px) 1fr 28px; align-items: center; gap: 0.6rem; padding: 0.32rem 0; }
+  .mbar-label { font-size: 0.78rem; color: var(--ink); }
+  .mbar-track { background: var(--gold-light); height: 8px; }
+  .mbar-fill { height: 100%; }
+  .mbar-cat { background: var(--green); }
+  .mbar-turno { background: var(--wine); }
+  .mbar-value { font-size: 0.78rem; font-weight: 600; text-align: right; }
+
+  .callout {
+    background: var(--gold-light);
+    border-left: 4px solid var(--gold);
+    padding: 1.1rem 1.3rem;
+    font-size: 0.92rem;
+    margin-top: 1.6rem;
+    color: var(--ink);
+  }
+  .callout strong { color: var(--wine); }
+
+  .note { font-size: 0.78rem; color: var(--ink-soft); margin-top: 0.8rem; }
+
+  footer {
+    margin-top: 3.6rem;
+    border-top: 1px solid var(--line);
+    padding: 1.8rem 1.5rem 2.6rem;
+  }
+  .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: 0.8rem; color: var(--ink-soft); }
+  .footer-org { font-weight: 600; color: var(--ink); }
+
+  .filter-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.3rem; }
+  .filter-btn {
+    font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600;
+    padding: 0.45rem 0.85rem; border: 1px solid var(--line); background: var(--paper);
+    color: var(--ink-soft); cursor: pointer; border-radius: 999px; transition: background 0.15s, color 0.15s, border-color 0.15s;
+  }
+  .filter-btn span { font-weight: 400; opacity: 0.8; }
+  .filter-btn:hover { border-color: var(--green); color: var(--ink); }
+  .filter-btn.active { background: var(--green); border-color: var(--green); color: #fff; }
+  .table-wrap { overflow-x: auto; }
+  table#all6Table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+  #all6Table thead th {
+    text-align: left; font-weight: 600; color: var(--ink-soft); font-size: 0.74rem;
+    text-transform: none; padding: 0.55rem 0.7rem; border-bottom: 2px solid var(--green);
+    white-space: nowrap;
+  }
+  #all6Table tbody td { padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--line); color: var(--ink); }
+  #all6Table tbody tr:hover { background: var(--gold-light); }
+  #all6Table tbody tr.is-hidden { display: none; }
+
+</style>
+</head>
+<body>
+
+<div class="topbar" style="background:#0a2e2b; color:#f8f3e9; padding:14px 0; border-bottom:3px solid #c69a3f;">
+  <div class="container" style="max-width:1100px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; font-family:'Inter',sans-serif;">
+    <a href="index.html" style="font-family:'Fraunces',serif; font-size:15px; font-weight:500; color:#f8f3e9; text-decoration:none;">Reto Clínico HGR
+      <span style="display:block; font-family:'Inter',sans-serif; font-size:11px; color:#bcd6d0; font-weight:400; margin-top:1px;">Hospital General Reynosa · Dr. José María Cantú Garza</span>
+    </a>
+    <nav>
+      <a href="index.html" style="color:#d9e8e4; text-decoration:none; font-size:14px; margin-left:20px;">Inicio</a>
+      <a href="ganadores.html" style="color:#d9e8e4; text-decoration:none; font-size:14px; margin-left:20px;">Ganadores</a>
+      <a href="numeralia.html" style="color:#f8f3e9; text-decoration:none; font-size:14px; margin-left:20px; border-bottom:1px solid #c69a3f;">Numeralia</a>
+    </nav>
+  </div>
+</div>
+
+<div class="gobline"></div>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="agency-row">
+      <div class="agency-mark">IB</div>
+      <div class="agency-text">
+        <div class="line1">IMSS-BIENESTAR</div>
+        <div class="line2">Hospital General Reynosa &ldquo;Dr. José María Cantú Garza&rdquo; &middot; Jurisdicción Sanitaria 04 &middot; Reynosa, Tamaulipas</div>
+      </div>
+    </div>
+    <h1>Reto Clínico de Seguridad del Paciente 2026</h1>
+    <p class="masthead-sub">Participación en los seis casos clínicos de las Acciones Esenciales para la Seguridad del Paciente (AESP), del 10 al 17 de septiembre de 2026.</p>
+    <div class="masthead-meta">
+      <span>Coordina: <strong>Departamento de Gestión de Calidad</strong> y <strong>Jefatura de Enseñanza de Enfermería</strong></span>
+      <span>Sede: <strong>Reynosa, Tamaulipas</strong></span>
+      <span>Duración: <strong>6 días, un caso por día</strong></span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi"><div class="num">224</div><div class="lbl">Participantes únicos</div></div>
+    <div class="kpi"><div class="num">566</div><div class="lbl">Participaciones totales (suma de los 6 retos)</div></div>
+    <div class="kpi"><div class="num">94.3</div><div class="lbl">Promedio de participantes por reto</div></div>
+    <div class="kpi"><div class="num">AESP 1</div><div class="lbl">Reto con más participación (127 personas)</div></div>
+    <div class="kpi"><div class="num">31</div><div class="lbl">Personas que resolvieron los 6 retos</div></div>
+    <div class="kpi"><div class="num">28.1%</div><div class="lbl">Participó en 4 retos o más</div></div>
+  </div>
+
+  <section class="first">
+    <div class="section-head">
+      <p class="section-eyebrow">Participación por reto</p>
+      <h2>¿Qué caso convocó a más personal?</h2>
+      <p>Participantes únicos registrados en cada uno de los seis casos clínicos, ya depurados de respuestas duplicadas por la misma persona en un mismo reto.</p>
+    </div>
+    <div class="card">
+      
+      <div class="rbar-row">
+        <div class="rbar-label">
+          <span class="rbar-code">AESP 1</span>
+          <span class="rbar-name">Identificación correcta de los pacientes</span>
+          <span class="rbar-date">Jueves 10 de septiembre</span>
+        </div>
+        <div class="rbar-track"><div class="rbar-fill" style="width:100.0%"></div></div>
+        <div class="rbar-value">127</div>
+      </div>
+      <div class="rbar-row">
+        <div class="rbar-label">
+          <span class="rbar-code">AESP 2</span>
+          <span class="rbar-name">Comunicación efectiva</span>
+          <span class="rbar-date">Viernes 11 de septiembre</span>
+        </div>
+        <div class="rbar-track"><div class="rbar-fill" style="width:74.0%"></div></div>
+        <div class="rbar-value">94</div>
+      </div>
+      <div class="rbar-row">
+        <div class="rbar-label">
+          <span class="rbar-code">AESP 3</span>
+          <span class="rbar-name">Seguridad en el proceso de medicación</span>
+          <span class="rbar-date">Lunes 14 de septiembre</span>
+        </div>
+        <div class="rbar-track"><div class="rbar-fill" style="width:66.9%"></div></div>
+        <div class="rbar-value">85</div>
+      </div>
+      <div class="rbar-row">
+        <div class="rbar-label">
+          <span class="rbar-code">AESP 4</span>
+          <span class="rbar-name">Seguridad en los procedimientos</span>
+          <span class="rbar-date">Martes 15 de septiembre</span>
+        </div>
+        <div class="rbar-track"><div class="rbar-fill" style="width:70.1%"></div></div>
+        <div class="rbar-value">89</div>
+      </div>
+      <div class="rbar-row">
+        <div class="rbar-label">
+          <span class="rbar-code">AESP 5</span>
+          <span class="rbar-name">Reducción del riesgo de infecciones asociadas a la atención de la salud (IAAS)</span>
+          <span class="rbar-date">Miércoles 16 de septiembre</span>
+        </div>
+        <div class="rbar-track"><div class="rbar-fill" style="width:70.9%"></div></div>
+        <div class="rbar-value">90</div>
+      </div>
+      <div class="rbar-row">
+        <div class="rbar-label">
+          <span class="rbar-code">AESP 6</span>
+          <span class="rbar-name">Reducción del riesgo de daño al paciente por causa de caídas</span>
+          <span class="rbar-date">Jueves 17 de septiembre</span>
+        </div>
+        <div class="rbar-track"><div class="rbar-fill" style="width:63.8%"></div></div>
+        <div class="rbar-value">81</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <p class="section-eyebrow">Perfil del participante</p>
+      <h2>Disciplina y turno, a nivel general</h2>
+      <p>Acumulado de las 566 participaciones registradas en los seis retos.</p>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <p class="panel-subhead">Por disciplina</p>
+        
+      <div class="hbar-row">
+        <div class="hbar-label">Pasante de Enfermería</div>
+        <div class="hbar-track"><div class="hbar-fill" style="width:100.0%; background:#006657"></div></div>
+        <div class="hbar-value">305 <span class="hbar-pct">(53.9%)</span></div>
+      </div>
+      <div class="hbar-row">
+        <div class="hbar-label">Profesional de Enfermería</div>
+        <div class="hbar-track"><div class="hbar-fill" style="width:53.8%; background:#0f7d68"></div></div>
+        <div class="hbar-value">164 <span class="hbar-pct">(29.0%)</span></div>
+      </div>
+      <div class="hbar-row">
+        <div class="hbar-label">Médico Interno de Pregrado (MIP)</div>
+        <div class="hbar-track"><div class="hbar-fill" style="width:11.5%; background:#bc955c"></div></div>
+        <div class="hbar-value">35 <span class="hbar-pct">(6.2%)</span></div>
+      </div>
+      <div class="hbar-row">
+        <div class="hbar-label">Médico Adscrito</div>
+        <div class="hbar-track"><div class="hbar-fill" style="width:7.2%; background:#9f2241"></div></div>
+        <div class="hbar-value">22 <span class="hbar-pct">(3.9%)</span></div>
+      </div>
+      <div class="hbar-row">
+        <div class="hbar-label">Químico/Técnico Laboratorista</div>
+        <div class="hbar-track"><div class="hbar-fill" style="width:5.6%; background:#5c7c73"></div></div>
+        <div class="hbar-value">17 <span class="hbar-pct">(3.0%)</span></div>
+      </div>
+      <div class="hbar-row">
+        <div class="hbar-label">Otras categorías</div>
+        <div class="hbar-track"><div class="hbar-fill" style="width:7.5%; background:#8a8073"></div></div>
+        <div class="hbar-value">23 <span class="hbar-pct">(4.1%)</span></div>
+      </div>
+      </div>
+      <div class="card">
+        <p class="panel-subhead">Por turno</p>
+        
+      <div class="hbar-row">
+        <div class="hbar-label">Matutino</div>
+        <div class="hbar-track"><div class="hbar-fill" style="width:100.0%; background:#006657"></div></div>
+        <div class="hbar-value">347 <span class="hbar-pct">(61.3%)</span></div>
+      </div>
+      <div class="hbar-row">
+        <div class="hbar-label">Vespertino</div>
+        <div class="hbar-track"><div class="hbar-fill" style="width:40.6%; background:#bc955c"></div></div>
+        <div class="hbar-value">141 <span class="hbar-pct">(24.9%)</span></div>
+      </div>
+      <div class="hbar-row">
+        <div class="hbar-label">Jornada Acumulada (diurno)</div>
+        <div class="hbar-track"><div class="hbar-fill" style="width:8.4%; background:#9f2241"></div></div>
+        <div class="hbar-value">29 <span class="hbar-pct">(5.1%)</span></div>
+      </div>
+      <div class="hbar-row">
+        <div class="hbar-label">Nocturno A</div>
+        <div class="hbar-track"><div class="hbar-fill" style="width:6.3%; background:#5c7c73"></div></div>
+        <div class="hbar-value">22 <span class="hbar-pct">(3.9%)</span></div>
+      </div>
+      <div class="hbar-row">
+        <div class="hbar-label">Nocturno B</div>
+        <div class="hbar-track"><div class="hbar-fill" style="width:5.5%; background:#0f7d68"></div></div>
+        <div class="hbar-value">19 <span class="hbar-pct">(3.4%)</span></div>
+      </div>
+      <div class="hbar-row">
+        <div class="hbar-label">Jornada Acumulada (nocturno)</div>
+        <div class="hbar-track"><div class="hbar-fill" style="width:1.7%; background:#8a8073"></div></div>
+        <div class="hbar-value">6 <span class="hbar-pct">(1.1%)</span></div>
+      </div>
+      <div class="hbar-row">
+        <div class="hbar-label">No especificado</div>
+        <div class="hbar-track"><div class="hbar-fill" style="width:0.6%; background:#c9c2b3"></div></div>
+        <div class="hbar-value">2 <span class="hbar-pct">(0.4%)</span></div>
+      </div>
+      </div>
+    </div>
+    <div class="callout">
+      <strong>Pasante y Profesional de Enfermería</strong> concentran la mayoría de las respuestas, y el <strong>turno matutino</strong> es, por mucho, el de mayor participación &mdash; consistente con la plantilla operativa de ese turno.
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <p class="section-eyebrow">Detalle por reto</p>
+      <h2>Disciplina y turno, caso por caso</h2>
+      <p>Selecciona un reto para ver su composición.</p>
+    </div>
+    <div class="card">
+      <input type="radio" name="retotab" id="tab1" checked><input type="radio" name="retotab" id="tab2"><input type="radio" name="retotab" id="tab3"><input type="radio" name="retotab" id="tab4"><input type="radio" name="retotab" id="tab5"><input type="radio" name="retotab" id="tab6">
+      <div class="tabs-nav">
+        <label for="tab1" class="tab-label"><span class="tab-code">AESP 1</span></label><label for="tab2" class="tab-label"><span class="tab-code">AESP 2</span></label><label for="tab3" class="tab-label"><span class="tab-code">AESP 3</span></label><label for="tab4" class="tab-label"><span class="tab-code">AESP 4</span></label><label for="tab5" class="tab-label"><span class="tab-code">AESP 5</span></label><label for="tab6" class="tab-label"><span class="tab-code">AESP 6</span></label>
+      </div>
+      <div class="tabs-panels">
+        
+      <section class="tab-panel" id="panel1">
+        <div class="panel-head">
+          <div>
+            <p class="panel-eyebrow">AESP 1 &middot; Jueves 10 de septiembre</p>
+            <h3>Identificación correcta de los pacientes</h3>
+          </div>
+          <div class="panel-n"><span>127</span>participantes</div>
+        </div>
+        <div class="panel-grid">
+          <div>
+            <p class="panel-subhead">Por disciplina</p>
+            <div class="mbar-row"><div class="mbar-label">Profesional de Enfermería</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:100.0%"></div></div>
+            <div class="mbar-value">56</div></div><div class="mbar-row"><div class="mbar-label">Pasante de Enfermería</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:89.3%"></div></div>
+            <div class="mbar-value">50</div></div><div class="mbar-row"><div class="mbar-label">Médico Interno de Pregrado (MIP)</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:10.7%"></div></div>
+            <div class="mbar-value">6</div></div><div class="mbar-row"><div class="mbar-label">Médico Adscrito</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:8.9%"></div></div>
+            <div class="mbar-value">5</div></div><div class="mbar-row"><div class="mbar-label">Químico/Técnico Laboratorista</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:8.9%"></div></div>
+            <div class="mbar-value">5</div></div><div class="mbar-row"><div class="mbar-label">Trabajo Social</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:1.8%"></div></div>
+            <div class="mbar-value">1</div></div><div class="mbar-row"><div class="mbar-label">Despachador de Farmacia</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:1.8%"></div></div>
+            <div class="mbar-value">1</div></div><div class="mbar-row"><div class="mbar-label">Servicio Social</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:1.8%"></div></div>
+            <div class="mbar-value">1</div></div><div class="mbar-row"><div class="mbar-label">Practicante QFB</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:1.8%"></div></div>
+            <div class="mbar-value">1</div></div><div class="mbar-row"><div class="mbar-label">Administrativo</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:1.8%"></div></div>
+            <div class="mbar-value">1</div></div>
+          </div>
+          <div>
+            <p class="panel-subhead">Por turno</p>
+            <div class="mbar-row"><div class="mbar-label">Matutino</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:100.0%"></div></div>
+            <div class="mbar-value">78</div></div><div class="mbar-row"><div class="mbar-label">Vespertino</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:32.1%"></div></div>
+            <div class="mbar-value">25</div></div><div class="mbar-row"><div class="mbar-label">Nocturno A</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:11.5%"></div></div>
+            <div class="mbar-value">9</div></div><div class="mbar-row"><div class="mbar-label">Nocturno B</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:7.7%"></div></div>
+            <div class="mbar-value">6</div></div><div class="mbar-row"><div class="mbar-label">Jornada Acumulada (diurno)</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:7.7%"></div></div>
+            <div class="mbar-value">6</div></div><div class="mbar-row"><div class="mbar-label">Jornada Acumulada (nocturno)</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:3.8%"></div></div>
+            <div class="mbar-value">3</div></div>
+          </div>
+        </div>
+      </section>
+      <section class="tab-panel" id="panel2">
+        <div class="panel-head">
+          <div>
+            <p class="panel-eyebrow">AESP 2 &middot; Viernes 11 de septiembre</p>
+            <h3>Comunicación efectiva</h3>
+          </div>
+          <div class="panel-n"><span>94</span>participantes</div>
+        </div>
+        <div class="panel-grid">
+          <div>
+            <p class="panel-subhead">Por disciplina</p>
+            <div class="mbar-row"><div class="mbar-label">Pasante de Enfermería</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:100.0%"></div></div>
+            <div class="mbar-value">51</div></div><div class="mbar-row"><div class="mbar-label">Profesional de Enfermería</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:52.9%"></div></div>
+            <div class="mbar-value">27</div></div><div class="mbar-row"><div class="mbar-label">Médico Interno de Pregrado (MIP)</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:15.7%"></div></div>
+            <div class="mbar-value">8</div></div><div class="mbar-row"><div class="mbar-label">Médico Adscrito</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:3.9%"></div></div>
+            <div class="mbar-value">2</div></div><div class="mbar-row"><div class="mbar-label">Practicante QFB</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:2.0%"></div></div>
+            <div class="mbar-value">1</div></div><div class="mbar-row"><div class="mbar-label">Médico Residente</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:2.0%"></div></div>
+            <div class="mbar-value">1</div></div><div class="mbar-row"><div class="mbar-label">Administrativo</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:2.0%"></div></div>
+            <div class="mbar-value">1</div></div><div class="mbar-row"><div class="mbar-label">Despachador de Farmacia</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:2.0%"></div></div>
+            <div class="mbar-value">1</div></div><div class="mbar-row"><div class="mbar-label">Químico/Técnico Laboratorista</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:2.0%"></div></div>
+            <div class="mbar-value">1</div></div><div class="mbar-row"><div class="mbar-label">Trabajo Social</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:2.0%"></div></div>
+            <div class="mbar-value">1</div></div>
+          </div>
+          <div>
+            <p class="panel-subhead">Por turno</p>
+            <div class="mbar-row"><div class="mbar-label">Matutino</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:100.0%"></div></div>
+            <div class="mbar-value">59</div></div><div class="mbar-row"><div class="mbar-label">Vespertino</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:35.6%"></div></div>
+            <div class="mbar-value">21</div></div><div class="mbar-row"><div class="mbar-label">Jornada Acumulada (diurno)</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:10.2%"></div></div>
+            <div class="mbar-value">6</div></div><div class="mbar-row"><div class="mbar-label">Nocturno A</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:8.5%"></div></div>
+            <div class="mbar-value">5</div></div><div class="mbar-row"><div class="mbar-label">Nocturno B</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:5.1%"></div></div>
+            <div class="mbar-value">3</div></div>
+          </div>
+        </div>
+      </section>
+      <section class="tab-panel" id="panel3">
+        <div class="panel-head">
+          <div>
+            <p class="panel-eyebrow">AESP 3 &middot; Lunes 14 de septiembre</p>
+            <h3>Seguridad en el proceso de medicación</h3>
+          </div>
+          <div class="panel-n"><span>85</span>participantes</div>
+        </div>
+        <div class="panel-grid">
+          <div>
+            <p class="panel-subhead">Por disciplina</p>
+            <div class="mbar-row"><div class="mbar-label">Pasante de Enfermería</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:100.0%"></div></div>
+            <div class="mbar-value">51</div></div><div class="mbar-row"><div class="mbar-label">Profesional de Enfermería</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:37.3%"></div></div>
+            <div class="mbar-value">19</div></div><div class="mbar-row"><div class="mbar-label">Médico Interno de Pregrado (MIP)</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:13.7%"></div></div>
+            <div class="mbar-value">7</div></div><div class="mbar-row"><div class="mbar-label">Químico/Técnico Laboratorista</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:5.9%"></div></div>
+            <div class="mbar-value">3</div></div><div class="mbar-row"><div class="mbar-label">Médico Adscrito</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:3.9%"></div></div>
+            <div class="mbar-value">2</div></div><div class="mbar-row"><div class="mbar-label">Trabajo Social</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:2.0%"></div></div>
+            <div class="mbar-value">1</div></div><div class="mbar-row"><div class="mbar-label">Administrativo</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:2.0%"></div></div>
+            <div class="mbar-value">1</div></div><div class="mbar-row"><div class="mbar-label">Despachador de Farmacia</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:2.0%"></div></div>
+            <div class="mbar-value">1</div></div>
+          </div>
+          <div>
+            <p class="panel-subhead">Por turno</p>
+            <div class="mbar-row"><div class="mbar-label">Matutino</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:100.0%"></div></div>
+            <div class="mbar-value">52</div></div><div class="mbar-row"><div class="mbar-label">Vespertino</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:48.1%"></div></div>
+            <div class="mbar-value">25</div></div><div class="mbar-row"><div class="mbar-label">Jornada Acumulada (diurno)</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:9.6%"></div></div>
+            <div class="mbar-value">5</div></div><div class="mbar-row"><div class="mbar-label">Nocturno A</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:3.8%"></div></div>
+            <div class="mbar-value">2</div></div><div class="mbar-row"><div class="mbar-label">Nocturno B</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:1.9%"></div></div>
+            <div class="mbar-value">1</div></div>
+          </div>
+        </div>
+      </section>
+      <section class="tab-panel" id="panel4">
+        <div class="panel-head">
+          <div>
+            <p class="panel-eyebrow">AESP 4 &middot; Martes 15 de septiembre</p>
+            <h3>Seguridad en los procedimientos</h3>
+          </div>
+          <div class="panel-n"><span>89</span>participantes</div>
+        </div>
+        <div class="panel-grid">
+          <div>
+            <p class="panel-subhead">Por disciplina</p>
+            <div class="mbar-row"><div class="mbar-label">Pasante de Enfermería</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:100.0%"></div></div>
+            <div class="mbar-value">54</div></div><div class="mbar-row"><div class="mbar-label">Profesional de Enfermería</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:37.0%"></div></div>
+            <div class="mbar-value">20</div></div><div class="mbar-row"><div class="mbar-label">Médico Interno de Pregrado (MIP)</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:13.0%"></div></div>
+            <div class="mbar-value">7</div></div><div class="mbar-row"><div class="mbar-label">Médico Adscrito</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:7.4%"></div></div>
+            <div class="mbar-value">4</div></div><div class="mbar-row"><div class="mbar-label">Administrativo</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:3.7%"></div></div>
+            <div class="mbar-value">2</div></div><div class="mbar-row"><div class="mbar-label">Químico/Técnico Laboratorista</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:1.9%"></div></div>
+            <div class="mbar-value">1</div></div><div class="mbar-row"><div class="mbar-label">Trabajo Social</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:1.9%"></div></div>
+            <div class="mbar-value">1</div></div>
+          </div>
+          <div>
+            <p class="panel-subhead">Por turno</p>
+            <div class="mbar-row"><div class="mbar-label">Matutino</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:100.0%"></div></div>
+            <div class="mbar-value">60</div></div><div class="mbar-row"><div class="mbar-label">Vespertino</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:35.0%"></div></div>
+            <div class="mbar-value">21</div></div><div class="mbar-row"><div class="mbar-label">Jornada Acumulada (diurno)</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:6.7%"></div></div>
+            <div class="mbar-value">4</div></div><div class="mbar-row"><div class="mbar-label">Nocturno B</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:3.3%"></div></div>
+            <div class="mbar-value">2</div></div><div class="mbar-row"><div class="mbar-label">Jornada Acumulada (nocturno)</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:1.7%"></div></div>
+            <div class="mbar-value">1</div></div><div class="mbar-row"><div class="mbar-label">Nocturno A</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:1.7%"></div></div>
+            <div class="mbar-value">1</div></div>
+          </div>
+        </div>
+      </section>
+      <section class="tab-panel" id="panel5">
+        <div class="panel-head">
+          <div>
+            <p class="panel-eyebrow">AESP 5 &middot; Miércoles 16 de septiembre</p>
+            <h3>Reducción del riesgo de infecciones asociadas a la atención de la salud (IAAS)</h3>
+          </div>
+          <div class="panel-n"><span>90</span>participantes</div>
+        </div>
+        <div class="panel-grid">
+          <div>
+            <p class="panel-subhead">Por disciplina</p>
+            <div class="mbar-row"><div class="mbar-label">Pasante de Enfermería</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:100.0%"></div></div>
+            <div class="mbar-value">47</div></div><div class="mbar-row"><div class="mbar-label">Profesional de Enfermería</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:57.4%"></div></div>
+            <div class="mbar-value">27</div></div><div class="mbar-row"><div class="mbar-label">Médico Interno de Pregrado (MIP)</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:10.6%"></div></div>
+            <div class="mbar-value">5</div></div><div class="mbar-row"><div class="mbar-label">Médico Adscrito</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:10.6%"></div></div>
+            <div class="mbar-value">5</div></div><div class="mbar-row"><div class="mbar-label">Administrativo</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:4.3%"></div></div>
+            <div class="mbar-value">2</div></div><div class="mbar-row"><div class="mbar-label">Químico/Técnico Laboratorista</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:4.3%"></div></div>
+            <div class="mbar-value">2</div></div><div class="mbar-row"><div class="mbar-label">Trabajo Social</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:2.1%"></div></div>
+            <div class="mbar-value">1</div></div><div class="mbar-row"><div class="mbar-label">Otro/Practicante</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:2.1%"></div></div>
+            <div class="mbar-value">1</div></div>
+          </div>
+          <div>
+            <p class="panel-subhead">Por turno</p>
+            <div class="mbar-row"><div class="mbar-label">Matutino</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:100.0%"></div></div>
+            <div class="mbar-value">55</div></div><div class="mbar-row"><div class="mbar-label">Vespertino</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:41.8%"></div></div>
+            <div class="mbar-value">23</div></div><div class="mbar-row"><div class="mbar-label">Nocturno B</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:9.1%"></div></div>
+            <div class="mbar-value">5</div></div><div class="mbar-row"><div class="mbar-label">Jornada Acumulada (diurno)</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:5.5%"></div></div>
+            <div class="mbar-value">3</div></div><div class="mbar-row"><div class="mbar-label">Nocturno A</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:3.6%"></div></div>
+            <div class="mbar-value">2</div></div><div class="mbar-row"><div class="mbar-label">Jornada Acumulada (nocturno)</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:1.8%"></div></div>
+            <div class="mbar-value">1</div></div><div class="mbar-row"><div class="mbar-label">No especificado</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:1.8%"></div></div>
+            <div class="mbar-value">1</div></div>
+          </div>
+        </div>
+      </section>
+      <section class="tab-panel" id="panel6">
+        <div class="panel-head">
+          <div>
+            <p class="panel-eyebrow">AESP 6 &middot; Jueves 17 de septiembre</p>
+            <h3>Reducción del riesgo de daño al paciente por causa de caídas</h3>
+          </div>
+          <div class="panel-n"><span>81</span>participantes</div>
+        </div>
+        <div class="panel-grid">
+          <div>
+            <p class="panel-subhead">Por disciplina</p>
+            <div class="mbar-row"><div class="mbar-label">Pasante de Enfermería</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:100.0%"></div></div>
+            <div class="mbar-value">52</div></div><div class="mbar-row"><div class="mbar-label">Profesional de Enfermería</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:28.8%"></div></div>
+            <div class="mbar-value">15</div></div><div class="mbar-row"><div class="mbar-label">Químico/Técnico Laboratorista</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:9.6%"></div></div>
+            <div class="mbar-value">5</div></div><div class="mbar-row"><div class="mbar-label">Médico Adscrito</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:7.7%"></div></div>
+            <div class="mbar-value">4</div></div><div class="mbar-row"><div class="mbar-label">Médico Interno de Pregrado (MIP)</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:3.8%"></div></div>
+            <div class="mbar-value">2</div></div><div class="mbar-row"><div class="mbar-label">Médico Residente</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:1.9%"></div></div>
+            <div class="mbar-value">1</div></div><div class="mbar-row"><div class="mbar-label">Trabajo Social</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:1.9%"></div></div>
+            <div class="mbar-value">1</div></div><div class="mbar-row"><div class="mbar-label">Administrativo</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-cat" style="width:1.9%"></div></div>
+            <div class="mbar-value">1</div></div>
+          </div>
+          <div>
+            <p class="panel-subhead">Por turno</p>
+            <div class="mbar-row"><div class="mbar-label">Matutino</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:100.0%"></div></div>
+            <div class="mbar-value">43</div></div><div class="mbar-row"><div class="mbar-label">Vespertino</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:60.5%"></div></div>
+            <div class="mbar-value">26</div></div><div class="mbar-row"><div class="mbar-label">Jornada Acumulada (diurno)</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:11.6%"></div></div>
+            <div class="mbar-value">5</div></div><div class="mbar-row"><div class="mbar-label">Nocturno A</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:7.0%"></div></div>
+            <div class="mbar-value">3</div></div><div class="mbar-row"><div class="mbar-label">Nocturno B</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:4.7%"></div></div>
+            <div class="mbar-value">2</div></div><div class="mbar-row"><div class="mbar-label">Jornada Acumulada (nocturno)</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:2.3%"></div></div>
+            <div class="mbar-value">1</div></div><div class="mbar-row"><div class="mbar-label">No especificado</div>
+            <div class="mbar-track"><div class="mbar-fill mbar-turno" style="width:2.3%"></div></div>
+            <div class="mbar-value">1</div></div>
+          </div>
+        </div>
+      </section>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <p class="section-eyebrow">Profundidad de participación</p>
+      <h2>¿Cuántos retos resolvió cada persona?</h2>
+      <p>De los 224 participantes únicos, así se distribuye cuántos de los seis retos resolvió cada quien.</p>
+    </div>
+    <div class="card">
+      
+      <div class="hbar-row">
+        <div class="hbar-label">1 reto</div>
+        <div class="hbar-track"><div class="hbar-fill" style="width:100.0%"></div></div>
+        <div class="hbar-value">100 <span class="hbar-pct">(44.6%)</span></div>
+      </div>
+      <div class="hbar-row">
+        <div class="hbar-label">2 retos</div>
+        <div class="hbar-track"><div class="hbar-fill" style="width:44.0%"></div></div>
+        <div class="hbar-value">44 <span class="hbar-pct">(19.6%)</span></div>
+      </div>
+      <div class="hbar-row">
+        <div class="hbar-label">3 retos</div>
+        <div class="hbar-track"><div class="hbar-fill" style="width:17.0%"></div></div>
+        <div class="hbar-value">17 <span class="hbar-pct">(7.6%)</span></div>
+      </div>
+      <div class="hbar-row">
+        <div class="hbar-label">4 retos</div>
+        <div class="hbar-track"><div class="hbar-fill" style="width:19.0%"></div></div>
+        <div class="hbar-value">19 <span class="hbar-pct">(8.5%)</span></div>
+      </div>
+      <div class="hbar-row">
+        <div class="hbar-label">5 retos</div>
+        <div class="hbar-track"><div class="hbar-fill" style="width:13.0%"></div></div>
+        <div class="hbar-value">13 <span class="hbar-pct">(5.8%)</span></div>
+      </div>
+      <div class="hbar-row depth-highlight">
+        <div class="hbar-label">6 retos</div>
+        <div class="hbar-track"><div class="hbar-fill" style="width:31.0%"></div></div>
+        <div class="hbar-value">31 <span class="hbar-pct">(13.8%)</span></div>
+      </div>
+    </div>
+    <p class="note">Se registraron 590 respuestas en los formularios; se depuraron 24 envíos duplicados de la misma persona en el mismo reto para obtener las cifras de este dashboard.</p>
+  </section>
+
+
+  <section id="all6-section">
+    <div class="section-head">
+      <p class="section-eyebrow">Participación completa</p>
+      <h2>Personal que resolvió los 6 retos</h2>
+      <p>31 personas completaron el Reto Clínico completo. Filtra por disciplina para ver quiénes fueron.</p>
+    </div>
+    <div class="card">
+      <div class="filter-row" id="filterRow">
+        <button type="button" class="filter-btn active" data-filter="todos">Todos <span>(31)</span></button><button type="button" class="filter-btn" data-filter="Pasante de Enfermería">Pasante de Enfermería <span>(26)</span></button><button type="button" class="filter-btn" data-filter="Profesional de Enfermería">Profesional de Enfermería <span>(2)</span></button><button type="button" class="filter-btn" data-filter="Médico Interno de Pregrado (MIP)">Médico Interno de Pregrado (MIP) <span>(1)</span></button><button type="button" class="filter-btn" data-filter="Médico Adscrito">Médico Adscrito <span>(1)</span></button><button type="button" class="filter-btn" data-filter="Administrativo">Administrativo <span>(1)</span></button>
+      </div>
+      <div class="table-wrap">
+        <table id="all6Table">
+          <thead>
+            <tr><th>Nombre</th><th>Categoría</th><th>Servicio/Departamento</th></tr>
+          </thead>
+          <tbody>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Aguilar Hernández Elia Floricel</td>
+          <td>Pasante de Enfermería</td>
+          <td>Cxm</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Alvarez De La Cruz Karina Aracely</td>
+          <td>Pasante de Enfermería</td>
+          <td>Tocó Cirugía</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Avalos Plascencia María Guadalupe</td>
+          <td>Pasante de Enfermería</td>
+          <td>Quirófano</td>
+        </tr>
+        <tr data-cat="Profesional de Enfermería">
+          <td>Balderas Turrubiates Gloria Idalia</td>
+          <td>Profesional de Enfermería</td>
+          <td>Ceye</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Camacho Duran Jessica Esthela</td>
+          <td>Pasante de Enfermería</td>
+          <td>Ceye</td>
+        </tr>
+        <tr data-cat="Profesional de Enfermería">
+          <td>Castillo Palacios Karla Alexia</td>
+          <td>Profesional de Enfermería</td>
+          <td>Urgencias</td>
+        </tr>
+        <tr data-cat="Médico Interno de Pregrado (MIP)">
+          <td>Cobos Lozano Luis Osiel</td>
+          <td>Médico Interno de Pregrado (MIP)</td>
+          <td>Ginecología Y Obstetricia</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Cuellar Romero Arlete Michelle</td>
+          <td>Pasante de Enfermería</td>
+          <td>Cirugía Mujeres</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>De La Cruz Dávila Yaritzi Lizeth</td>
+          <td>Pasante de Enfermería</td>
+          <td>Medicina Interna Mujeres</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Ferral Avila Montserrat</td>
+          <td>Pasante de Enfermería</td>
+          <td>Ucia</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>González Gálvez Denisse Alejandra</td>
+          <td>Pasante de Enfermería</td>
+          <td>Quirofano</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Hernandez Cruz Aby Sarahi</td>
+          <td>Pasante de Enfermería</td>
+          <td>Disponible</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Hernandez Vidal Lizeth Guadalupe</td>
+          <td>Pasante de Enfermería</td>
+          <td>Hospital General De Reynosa</td>
+        </tr>
+        <tr data-cat="Médico Adscrito">
+          <td>Iglesias Sánchez Yoana</td>
+          <td>Médico Adscrito</td>
+          <td>Epidemiología</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Ignacio Ferrer Britney Josselin</td>
+          <td>Pasante de Enfermería</td>
+          <td>Quirófano/enseñanza</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Maldonado Morales Hannia Azuleh</td>
+          <td>Pasante de Enfermería</td>
+          <td>Servicio Social</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Marin Garcia Devora Yamilet</td>
+          <td>Pasante de Enfermería</td>
+          <td>Sala General</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Martínez Hernández Aurelia</td>
+          <td>Pasante de Enfermería</td>
+          <td>Hospital General Reynosa</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Marval Figueredo Johanny</td>
+          <td>Pasante de Enfermería</td>
+          <td>Servicio Social</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Medina Guevara Estrella</td>
+          <td>Pasante de Enfermería</td>
+          <td>Servicio Social</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Mendoza Reyes Mayra Alexandra</td>
+          <td>Pasante de Enfermería</td>
+          <td>Urgencias Camas</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Monsivais Ruiz Mia Azul</td>
+          <td>Pasante de Enfermería</td>
+          <td>Sala General</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Morin Garza Vanessa Dominike</td>
+          <td>Pasante de Enfermería</td>
+          <td>Urg</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Muñoz Dena Alma Denisse</td>
+          <td>Pasante de Enfermería</td>
+          <td>Urgencias Camas</td>
+        </tr>
+        <tr data-cat="Administrativo">
+          <td>Picazo Reyes Norma Esther</td>
+          <td>Administrativo</td>
+          <td>Farmacia</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Ramirez Fonseca Jeidy Karime</td>
+          <td>Pasante de Enfermería</td>
+          <td>Lactantes</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Ramírez Miguel Teresa Guadalupe</td>
+          <td>Pasante de Enfermería</td>
+          <td>Cxm</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Ruiz Narvaez Breeze Hermaione</td>
+          <td>Pasante de Enfermería</td>
+          <td>Aislados</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Santes Hernández Karina</td>
+          <td>Pasante de Enfermería</td>
+          <td>Enfermería</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Solis Garza Stephanie Astrid</td>
+          <td>Pasante de Enfermería</td>
+          <td>Pasante De Enfermeria</td>
+        </tr>
+        <tr data-cat="Pasante de Enfermería">
+          <td>Varela Palos Karla Argentina</td>
+          <td>Pasante de Enfermería</td>
+          <td>Disponible</td>
+        </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" id="filterCount">Mostrando 31 de 31 personas.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-org">Departamento de Gestión de Calidad &middot; Jefatura de Enseñanza de Enfermería</div>
+      <div>Hospital General Reynosa &ldquo;Dr. José María Cantú Garza&rdquo; &middot; IMSS-BIENESTAR</div>
+    </div>
+    <div>Reto Clínico de Seguridad del Paciente &middot; 10&ndash;17 de septiembre de 2026</div>
+  </div>
+  <div class="footer-inner" style="margin-top:10px;">
+    <div class="visit-count"><img src="https://visitor-badge.laobi.icu/badge?page_id=reto-clinico-hgr.numeralia" alt="contador de visitas" style="height:15px; filter:grayscale(1) opacity(.6); vertical-align:middle;"></div>
+  </div>
+</footer>
+
+
+<script>
+(function(){
+  var buttons = document.querySelectorAll('#filterRow .filter-btn');
+  var rows = document.querySelectorAll('#all6Table tbody tr');
+  var countEl = document.getElementById('filterCount');
+  var total = rows.length;
+  function applyFilter(cat){
+    var visible = 0;
+    rows.forEach(function(r){
+      var match = (cat === 'todos') || (r.getAttribute('data-cat') === cat);
+      r.classList.toggle('is-hidden', !match);
+      if (match) visible++;
+    });
+    countEl.textContent = 'Mostrando ' + visible + ' de ' + total + ' personas.';
+  }
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      buttons.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      applyFilter(btn.getAttribute('data-filter'));
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
